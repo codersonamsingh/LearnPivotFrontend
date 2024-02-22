@@ -40,17 +40,19 @@ function About() {
         My rule rugaltion
       
       </Typography>
+    
+      <Grid container spacing={2}>
+    
+      <Grid item xs={5}   style={{  marginRight: 20, marginLeft:50, backgroundColor:"pink" }}>
       <Typography variant="body1" gutterBottom>
-      <Grid item xs={2}>
+      
         Those student who intrested so,please they fill our from and they know our rule ragulation
         which will benefits for both of us..Thanking you for visit here
         
-   </Grid>
-      </Typography>
-      <Grid container spacing={2}>
-      <Grid item xs={1}>
    
-   </Grid>
+      </Typography>
+      </Grid>
+    
   <Grid item xs={3}>
   <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Age</InputLabel>
