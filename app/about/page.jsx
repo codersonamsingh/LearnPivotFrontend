@@ -47,7 +47,7 @@ function About() {
       <Typography variant="body1" gutterBottom>
       
         Those student who intrested so,please they fill our from and they know our rule ragulation
-        which will benefits for both of us..Thanking you for visit here
+        which will benefits for both of us..Thanking you for visit here vv
         
    
       </Typography>
