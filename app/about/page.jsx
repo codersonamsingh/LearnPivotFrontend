@@ -4,7 +4,7 @@ import Header from "../Components/Header1/Header";
 import { TopAbstract } from "../MyApp";
 import Enquiry from "../Components/Enquiry/Enquiry";
 import { NewFooter } from "../Components/Footer/Footer";
-import { Typography, Grid, Divider, Button, Radio, Box, Stack, Chip, List, TextField, Snackbar} from "@mui/material";
+import { Typography, Grid, Divider, Button, Radio, Box, Stack, Chip, List, TextField, CardContent, CardMedia, Card, CardActions } from "@mui/material";
 import Link from "next/link";
 import FormControlLabel from '@mui/material/FormControlLabel';
 import InputLabel from '@mui/material/InputLabel';
@@ -47,8 +47,26 @@ function About() {
         <Chip label="success" color="success" />
       </Stack>
       </Stack>
-      <Button onClick={handleClick}>Open Snackbar</Button>
-      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+      <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        sx={{ height: 140 }}
+        image="/static/images/cards/contemplative-reptile.jpg"
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Lizard
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Lizards are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
       <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <ListItem>
         <ListItemAvatar>
