@@ -4,13 +4,20 @@ import Header from "../Components/Header1/Header";
 import { TopAbstract } from "../MyApp";
 import Enquiry from "../Components/Enquiry/Enquiry";
 import { NewFooter } from "../Components/Footer/Footer";
-import { Container, Typography, Grid, Divider, Breadcrumbs, TextField, Button, Radio, Box, Stack, Chip } from "@mui/material";
+import { Typography, Grid, Divider, Button, Radio, Box, Stack, Chip, List, TextField, Snackbar} from "@mui/material";
 import Link from "next/link";
 import FormControlLabel from '@mui/material/FormControlLabel';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import ImageIcon from '@mui/icons-material/Image';
+import WorkIcon from '@mui/icons-material/Work';
+import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 
 
 
@@ -40,6 +47,8 @@ function About() {
         <Chip label="success" color="success" />
       </Stack>
       </Stack>
+      <Button onClick={handleClick}>Open Snackbar</Button>
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
       <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <ListItem>
         <ListItemAvatar>
@@ -66,6 +75,7 @@ function About() {
         <ListItemText primary="Vacation" secondary="July 20, 2014" />
       </ListItem>
     </List>
+    
       <Button variant="text">Text</Button>
       <Typography variant="h4" gutterBottom>
      
