@@ -4,7 +4,7 @@ import Header from "../Components/Header1/Header";
 import { TopAbstract } from "../MyApp";
 import Enquiry from "../Components/Enquiry/Enquiry";
 import { NewFooter } from "../Components/Footer/Footer";
-import { Container, Typography, Grid, Divider, Breadcrumbs, TextField, Button, Radio, Box } from "@mui/material";
+import { Container, Typography, Grid, Divider, Breadcrumbs, TextField, Button, Radio, Box, Stack, Chip } from "@mui/material";
 import Link from "next/link";
 import FormControlLabel from '@mui/material/FormControlLabel';
 import InputLabel from '@mui/material/InputLabel';
@@ -34,8 +34,41 @@ function About() {
       <TopAbstract />
     
       <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+      <Stack spacing={1} alignItems="center">
+      <Stack direction="row" spacing={1}>
+        <Chip label="primary" color="primary" />
+        <Chip label="success" color="success" />
+      </Stack>
+      </Stack>
+      <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <ImageIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Photos" secondary="Jan 9, 2014" />
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <WorkIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Work" secondary="Jan 7, 2014" />
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <BeachAccessIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Vacation" secondary="July 20, 2014" />
+      </ListItem>
+    </List>
       <Button variant="text">Text</Button>
       <Typography variant="h4" gutterBottom>
+     
   
         My rule rugaltion
       
