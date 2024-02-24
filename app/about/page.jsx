@@ -47,26 +47,7 @@ function About() {
         <Chip label="success" color="success" />
       </Stack>
       </Stack>
-      <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+     
       <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <ListItem>
         <ListItemAvatar>
@@ -108,7 +89,7 @@ function About() {
       <Typography variant="body1" gutterBottom>
       
         Those student who intrested so,please they fill our from and they know our rule ragulation
-        which will benefits for both of us..Thanking you for visit here vv
+        which will benefits for both of us..Thanking you for visit here 
         
    
       </Typography>
@@ -137,6 +118,28 @@ function About() {
         <FormControlLabel value="male" control={<Radio />} label="Male" />
         <FormControlLabel value="other" control={<Radio />} label="Other" />
         const [age, setAge] = React.useState('');
+
+        <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        sx={{ height: 140 }}
+        image="/static/images/cards/contemplative-reptile.jpg"
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Study
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          <Grid style={{ marginRight: 20, marginLeft:50, backgroundColor:"pink"}}>
+          Study Hard, No matter if it seems impossible, no matterif it takes time, no matter if you have up to all night,
+          just Remember that the feeling of success is the best thing in entire World..</Grid>
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
 
      
 
