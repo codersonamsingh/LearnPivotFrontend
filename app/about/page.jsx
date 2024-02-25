@@ -4,7 +4,7 @@ import Header from "../Components/Header1/Header";
 import { TopAbstract } from "../MyApp";
 import Enquiry from "../Components/Enquiry/Enquiry";
 import { NewFooter } from "../Components/Footer/Footer";
-import { Typography, Grid, Divider, Button, Radio, Box, Stack, Chip, List, TextField, CardContent, Toolbar,MenuIcon,IconButton, CardMedia, Card, CardActions } from "@mui/material";
+import { Typography, Grid, Divider, Button, Radio, Box, Stack, Chip, List, TextField, CardContent, refreshMessages, CardMedia, Card, CardActions } from "@mui/material";
 import Link from "next/link";
 import FormControlLabel from '@mui/material/FormControlLabel';
 import InputLabel from '@mui/material/InputLabel';
@@ -57,7 +57,7 @@ function About() {
             <ImageIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Photos" secondary="Jan 9, 2014" />
+        <ListItemText primary="Photos" secondary="Jan 9, 2024" />
       </ListItem>
       <ListItem>
         <ListItemAvatar>
@@ -65,7 +65,7 @@ function About() {
             <WorkIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Work" secondary="Jan 7, 2014" />
+        <ListItemText primary="Work" secondary="Jan 7, 2024" />
       </ListItem>
       <ListItem>
         <ListItemAvatar>
@@ -73,7 +73,7 @@ function About() {
             <BeachAccessIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Vacation" secondary="July 20, 2014" />
+        <ListItemText primary="Vacation" secondary="July 20, 2024" />
       </ListItem>
     </List>
     
@@ -143,25 +143,7 @@ function About() {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
-          </Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar>
-    </Box>
+
      
 
 
