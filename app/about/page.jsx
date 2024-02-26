@@ -4,13 +4,12 @@ import Header from "../Components/Header1/Header";
 import { TopAbstract } from "../MyApp";
 import Enquiry from "../Components/Enquiry/Enquiry";
 import { NewFooter } from "../Components/Footer/Footer";
-import { Typography, Grid, Divider, Button, Radio, Box, Stack, Chip, List, TextField, CardContent, refreshMessages, CardMedia, Card, CardActions } from "@mui/material";
+import { Typography, Grid, Divider, Button, Radio, Box, Stack, Chip, List, TextField, CardContent, refreshMessages, CardMedia, Card, CardActions, AppBar, Toolbar, IconButton, Select, Checkbox } from "@mui/material";
 import Link from "next/link";
 import FormControlLabel from '@mui/material/FormControlLabel';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
@@ -23,11 +22,12 @@ import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 
 
 import "./aboutStyle.css";
+import MyStepper from "../Components/About/Steper";
 
       
 
 function About() {
-
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
   const [age, setAge] = React.useState('');
 
   const handleChange = (event) => {
@@ -47,8 +47,28 @@ function About() {
         <Chip label="success" color="success" />
       </Stack>
       </Stack>
-      
-  
+   <MyStepper />   
+   <Checkbox {...label} defaultChecked />
+
+  <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+           
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{flexGrow: 1 }}>
+            News
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
      
       <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <ListItem>
