@@ -23,6 +23,7 @@ import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 
 import "./aboutStyle.css";
 import MyStepper from "../Components/About/Steper";
+import BottomAppBar from "../Components/About/Cod";
 
       
 
@@ -48,6 +49,8 @@ function About() {
       </Stack>
       </Stack>
    <MyStepper />   
+   <BottomAppBar />
+   
    <Checkbox {...label} defaultChecked />
 
   <Box sx={{ flexGrow: 1 }}>
