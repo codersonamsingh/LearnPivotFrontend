@@ -22,15 +22,15 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 const messages = [
   {
     id: 1,
-    primary: 'Brunch this week?',
-    secondary: "I'll be in the neighbourhood this week. Let's grab a bite to eat",
+    primary: 'our session started?',
+    secondary: "It doesn't matter what other are doing, it's matter what you are doing",
     person: 'https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg',
   },
   {
     id: 2,
-    primary: 'Birthday Gift',
-    secondary: `Do you have a suggestion for a good present for John on his work
-      anniversary. I am really confused & would love your thoughts on it.`,
+    primary: 'your first day of School/College',
+    secondary: `The first day of School/College can be Scary one, but your Strength and perseverance are 
+    greater than your fears.`,
     person: 'https://i.pinimg.com/736x/d0/79/81/d079816c1e699834fd1f01eceeddee8e.jpg',
   },
   {
@@ -42,7 +42,7 @@ const messages = [
   {
     id: 4,
     primary: 'Yes!',
-    secondary: 'I have the tickets to the ReactConf for this year.',
+    secondary: 'We can kept your own goal not by obstacles but by a clear path to a lesser goal.',
     person: 'https://www.freecodecamp.org/news/content/images/2022/01/ferenc-almasi-L8KQIPCODV8-unsplash.jpg',
   },
   {
