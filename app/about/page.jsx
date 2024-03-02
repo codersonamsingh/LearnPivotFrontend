@@ -25,6 +25,7 @@ import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 import "./aboutStyle.css";
 import MyStepper from "../Components/About/Steper";
 import BottomAppBar from "../Components/About/Cod";
+import  DiscreteSliderMarks from"../Components/About/slider";
 
       
 
@@ -51,6 +52,7 @@ function About() {
       </Stack>
    <MyStepper />   
    <BottomAppBar />
+   < DiscreteSliderMarks />
    
    <Checkbox {...label} defaultChecked />
 
