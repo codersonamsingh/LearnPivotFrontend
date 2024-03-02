@@ -4,7 +4,8 @@ import Header from "../Components/Header1/Header";
 import { TopAbstract } from "../MyApp";
 import Enquiry from "../Components/Enquiry/Enquiry";
 import { NewFooter } from "../Components/Footer/Footer";
-import { Typography, Grid, Divider, Button, Radio, Box, Stack, Chip, List, TextField, CardContent, refreshMessages, CardMedia, Card, CardActions, AppBar, Toolbar, IconButton, Select, Checkbox } from "@mui/material";
+import { Typography, Grid, Divider, Button, Radio, Autocomplete, Rating, Box, Stack, Chip, List, TextField, CardContent, refreshMessages, CardMedia, Card, 
+ CardActions, AppBar, Toolbar, IconButton, Select, Checkbox } from "@mui/material";
 import Link from "next/link";
 import FormControlLabel from '@mui/material/FormControlLabel';
 import InputLabel from '@mui/material/InputLabel';
@@ -34,7 +35,7 @@ function About() {
   const handleChange = (event) => {
     setAge(event.target.value);
   };
-
+ 
 
   return (
     <main style={{ backgroundColor: "#fff" }}>
@@ -166,13 +167,23 @@ function About() {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
+    <Button variant="contained">Contained</Button>
+    
 
+    <Grid item xs={5}   style={{  marginRight: 60, marginLeft:50 }}>
+     <Rating name="half-rating-read" defaultValue={2.5} precision={0.5} readOnly />
      
-
-
-     
+    <Autocomplete
+      disablePortal
+      id="combo-box-demo"
+     // options={top10Games}
+      sx={{ width: 300 }}
+      renderInput={(params) => <TextField {...params} label="Game" />}
+    />
+     </Grid>
       <NewFooter />
     </main>
+    
   );
   
   
