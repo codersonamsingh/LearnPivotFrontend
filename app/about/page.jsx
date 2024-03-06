@@ -4,7 +4,7 @@ import Header from "../Components/Header1/Header";
 import { TopAbstract } from "../MyApp";
 import Enquiry from "../Components/Enquiry/Enquiry";
 import { NewFooter } from "../Components/Footer/Footer";
-import { Typography, Grid, Divider, Button, Radio, Autocomplete, Rating, Badge, Box, Stack, Chip, List, TextField, CardContent, refreshMessages, CardMedia, Card, 
+import { Typography, Grid, Divider, Button, Radio, Autocomplete, Rating, Badge, Box,content, Stack, Chip, List, TextField, CardContent, refreshMessages, CardMedia, Card, 
  CardActions, AppBar, Toolbar, IconButton, Select, Checkbox } from "@mui/material";
  import MailIcon from '@mui/icons-material/Mail';
 
@@ -41,6 +41,10 @@ function About() {
   const handleChange = (event) => {
     setAge(event.target.value);
   };
+  const content = (
+    <p>{`I think this app is Useful to us Soo,.
+   " Resarch is creating new knowledge..."`}</p>
+  );
  
 
   return (
@@ -202,6 +206,8 @@ function About() {
       <Chip label="Chip Filled" />
       <Chip label="Chip Outlined" variant="outlined" />
     </Stack>
+    {content}
+      <Divider>CENTER</Divider>
       <NewFooter />
     </main>
     
