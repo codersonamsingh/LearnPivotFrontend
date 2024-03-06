@@ -4,9 +4,10 @@ import Header from "../Components/Header1/Header";
 import { TopAbstract } from "../MyApp";
 import Enquiry from "../Components/Enquiry/Enquiry";
 import { NewFooter } from "../Components/Footer/Footer";
-import { Typography, Grid, Divider, Button, Radio, Autocomplete, Rating, Box, Stack, Chip, List, TextField, CardContent, refreshMessages, CardMedia, Card, 
+import { Typography, Grid, Divider, Button, Radio, Autocomplete, Rating, Badge, Box, Stack, Chip, List, TextField, CardContent, refreshMessages, CardMedia, Card, 
  CardActions, AppBar, Toolbar, IconButton, Select, Checkbox } from "@mui/material";
-import Link from "next/link";
+ import MailIcon from '@mui/icons-material/Mail';
+
 import FormControlLabel from '@mui/material/FormControlLabel';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -22,10 +23,14 @@ import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 
 
 
+
+
 import "./aboutStyle.css";
 import MyStepper from "../Components/About/Steper";
 import BottomAppBar from "../Components/About/Cod";
 import  DiscreteSliderMarks from"../Components/About/slider";
+import  ToggleButtons from"../Components/About/toggle";
+
 
       
 
@@ -53,6 +58,7 @@ function About() {
    <MyStepper />   
    <BottomAppBar />
    < DiscreteSliderMarks />
+   <ToggleButtons />
    
    <Checkbox {...label} defaultChecked />
 
@@ -183,6 +189,19 @@ function About() {
       renderInput={(params) => <TextField {...params} label="Game" />}
     />
      </Grid>
+     <Stack direction="row" spacing={2}>
+
+     <Avatar alt="Travis Howard" src="https://t4.ftcdn.net/jpg/03/69/19/81/360_F_369198116_K0sFy2gRTo1lmIf5jVGeQmaIEibjC3NN.jpg" />
+     </Stack>
+     <Grid item xs={5}   style={{  marginRight: 60, marginLeft:50, backgroungColour:"pink" }}>
+     <Badge badgeContent={4} color="primary">
+      <MailIcon color="action" />
+    </Badge>
+    </Grid>
+    <Stack direction="row" spacing={1}>
+      <Chip label="Chip Filled" />
+      <Chip label="Chip Outlined" variant="outlined" />
+    </Stack>
       <NewFooter />
     </main>
     
