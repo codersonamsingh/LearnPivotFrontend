@@ -5,7 +5,7 @@ import { TopAbstract } from "../MyApp";
 import Enquiry from "../Components/Enquiry/Enquiry";
 import { NewFooter } from "../Components/Footer/Footer";
 import { Typography, Grid, Divider, Button, Radio, Autocomplete, Rating, Badge, Box,content, Stack, Chip, List, TextField, CardContent, refreshMessages, CardMedia, Card, 
- CardActions, AppBar, Toolbar, IconButton, Select, Checkbox } from "@mui/material";
+ CardActions, AppBar, Toolbar,Tooltip,IconButton, Select, Checkbox } from "@mui/material";
  import MailIcon from '@mui/icons-material/Mail';
 
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -19,6 +19,7 @@ import Avatar from '@mui/material/Avatar';
 import ImageIcon from '@mui/icons-material/Image';
 import WorkIcon from '@mui/icons-material/Work';
 import BeachAccessIcon from '@mui/icons-material/BeachAccess';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 
@@ -30,6 +31,7 @@ import MyStepper from "../Components/About/Steper";
 import BottomAppBar from "../Components/About/Cod";
 import  DiscreteSliderMarks from"../Components/About/slider";
 import  ToggleButtons from"../Components/About/toggle";
+import  EnhancedTable from"../Components/About/Table";
 
 
       
@@ -63,6 +65,7 @@ function About() {
    <BottomAppBar />
    < DiscreteSliderMarks />
    <ToggleButtons />
+   <EnhancedTable />
    
    <Checkbox {...label} defaultChecked />
 
@@ -208,6 +211,11 @@ function About() {
     </Stack>
     {content}
       <Divider>CENTER</Divider>
+      <Tooltip title="Delete">
+      <IconButton>
+        <DeleteIcon />
+      </IconButton>
+    </Tooltip>
       <NewFooter />
     </main>
     
