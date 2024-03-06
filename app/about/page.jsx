@@ -5,7 +5,7 @@ import { TopAbstract } from "../MyApp";
 import Enquiry from "../Components/Enquiry/Enquiry";
 import { NewFooter } from "../Components/Footer/Footer";
 import { Typography, Grid, Divider, Button, Radio, Autocomplete, Rating, Badge, Box,content, Stack, Chip, List, TextField, CardContent, refreshMessages, CardMedia, Card, 
- CardActions, AppBar, Toolbar,Tooltip,IconButton, Select, Checkbox } from "@mui/material";
+ CardActions, AppBar, Toolbar,Tooltip,IconButton, Select, Checkbox, styled } from "@mui/material";
  import MailIcon from '@mui/icons-material/Mail';
 
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -47,7 +47,12 @@ function About() {
     <p>{`I think this app is Useful to us Soo,.
    " Resarch is creating new knowledge..."`}</p>
   );
- 
+  const Div = styled('div')(({ theme }) => ({
+    ...theme.typography.button,
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(1),
+  }));
+  
 
   return (
     <main style={{ backgroundColor: "#fff" }}>
@@ -216,6 +221,11 @@ function About() {
         <DeleteIcon />
       </IconButton>
     </Tooltip>
+    <Grid style={{ marginRight: 50, marginLeft:80, backgroundColor:"pink"}}>
+    <Div>{"Work hard in SLIENCE Let Success Make The NOISE."}</Div>;
+    </Grid>
+    
+
       <NewFooter />
     </main>
     
