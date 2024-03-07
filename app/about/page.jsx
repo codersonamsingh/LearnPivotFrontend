@@ -5,7 +5,7 @@ import { TopAbstract } from "../MyApp";
 import Enquiry from "../Components/Enquiry/Enquiry";
 import { NewFooter } from "../Components/Footer/Footer";
 import { Typography, Grid, Divider, Button, Radio, Autocomplete, Rating, Badge, Box,content, Stack, Chip, List, TextField, CardContent, refreshMessages, CardMedia, Card, 
- CardActions, AppBar, Toolbar,Tooltip,IconButton, Select, Checkbox, styled } from "@mui/material";
+ CardActions, AppBar, Toolbar,Tooltip,IconButton, Skeleton,Select, Checkbox,CircularProgress,SnackbarContent, styled } from "@mui/material";
  import MailIcon from '@mui/icons-material/Mail';
 
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -53,7 +53,11 @@ function About() {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(1),
   }));
-  
+  const action = (
+    <Button color="secondary" size="small">
+      lorem ipsum dolorem
+    </Button>
+  );
 
   return (
     <main style={{ backgroundColor: "#fff" }}>
@@ -226,7 +230,29 @@ function About() {
     <Grid style={{ marginRight: 50, marginLeft:80, backgroundColor:"pink"}}>
     <Div>{"Work hard in SLIENCE Let Success Make The NOISE."}</Div>;
     </Grid>
-    
+    <Stack sx={{ color: 'grey.500' }} spacing={2} direction="row">
+      <CircularProgress color="secondary" />
+      <CircularProgress color="success" />
+      
+    </Stack>
+    <Box sx={{ width: 300 }}>
+      <Skeleton />
+      <Skeleton animation="wave" />
+      <Skeleton animation={false} />
+    </Box>
+    <Stack spacing={2} sx={{ maxWidth: 600 }}>
+      <SnackbarContent message="I love snacks." action={action} />
+      <SnackbarContent
+        message={
+          'I love candy. I love cookies. I love cupcakes. \
+          I love cheesecake. I love chocolate.'
+        }
+      />
+      <SnackbarContent
+        message="I love candy. I love cookies. I love cupcakes."
+        action={action}
+      />
+      </Stack>
 
       <NewFooter />
     </main>
