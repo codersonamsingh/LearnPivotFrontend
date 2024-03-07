@@ -32,6 +32,7 @@ import BottomAppBar from "../Components/About/Cod";
 import  DiscreteSliderMarks from"../Components/About/slider";
 import  ToggleButtons from"../Components/About/toggle";
 import  EnhancedTable from"../Components/About/Table";
+import  AlertDialog from"../Components/About/Alert";
 
 
       
@@ -71,6 +72,7 @@ function About() {
    < DiscreteSliderMarks />
    <ToggleButtons />
    <EnhancedTable />
+   <AlertDialog />
    
    <Checkbox {...label} defaultChecked />
 
