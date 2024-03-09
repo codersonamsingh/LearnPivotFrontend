@@ -33,6 +33,9 @@ import  DiscreteSliderMarks from"../Components/About/slider";
 import  ToggleButtons from"../Components/About/toggle";
 import  EnhancedTable from"../Components/About/Table";
 import  AlertDialog from"../Components/About/Alert";
+import  IconMenu from"../Components/About/Menu";
+
+
 
 
       
@@ -77,6 +80,7 @@ function About() {
    <ToggleButtons />
    <EnhancedTable />
    <AlertDialog />
+   <IconMenu />
    
    <Checkbox {...label} defaultChecked />
 
