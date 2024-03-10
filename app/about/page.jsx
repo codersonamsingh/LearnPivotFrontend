@@ -5,7 +5,8 @@ import { TopAbstract } from "../MyApp";
 import Enquiry from "../Components/Enquiry/Enquiry";
 import { NewFooter } from "../Components/Footer/Footer";
 import { Typography, Grid, Divider, Button, Radio, Autocomplete, Rating, Badge, Box,content, Stack, Chip, List, TextField, CardContent, refreshMessages, CardMedia, Card, 
- CardActions, AppBar, Toolbar,Tooltip,IconButton, Skeleton,Select, Checkbox,CircularProgress,SnackbarContent, styled } from "@mui/material";
+ CardActions, AppBar, Toolbar,Tooltip,IconButton, Skeleton,Select, Pagination, Checkbox,CircularProgress,SnackbarContent, styled, SpeedDial, SpeedDialIcon, SpeedDialAction, Paper, ListItemIcon, MenuList,
+  } from "@mui/material";
  import MailIcon from '@mui/icons-material/Mail';
 
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -20,10 +21,15 @@ import ImageIcon from '@mui/icons-material/Image';
 import WorkIcon from '@mui/icons-material/Work';
 import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 import DeleteIcon from '@mui/icons-material/Delete';
-
-
-
-
+import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
+import SaveIcon from '@mui/icons-material/Save';
+import PrintIcon from '@mui/icons-material/Print';
+import ShareIcon from '@mui/icons-material/Share';
+import EditIcon from '@mui/icons-material/Edit';
+import ContentCut from '@mui/icons-material/ContentCut';
+import ContentCopy from '@mui/icons-material/ContentCopy';
+import ContentPaste from '@mui/icons-material/ContentPaste';
+import Cloud from '@mui/icons-material/Cloud';
 
 
 import "./aboutStyle.css";
@@ -34,11 +40,10 @@ import  ToggleButtons from"../Components/About/toggle";
 import  EnhancedTable from"../Components/About/Table";
 import  AlertDialog from"../Components/About/Alert";
 import  IconMenu from"../Components/About/Menu";
+import HorizontalLinearStepper from "../Components/About/Steeper";
 
 
-
-
-      
+ 
 
 function About() {
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
@@ -61,6 +66,12 @@ function About() {
       lorem ipsum dolorem
     </Button>
   );
+  const actions = [
+    { icon: <FileCopyIcon />, name: 'Copy' },
+    { icon: <SaveIcon />, name: 'Save' },
+    { icon: <PrintIcon />, name: 'Print' },
+    { icon: <ShareIcon />, name: 'Share' },
+  ];
 
   return (
     <main style={{ backgroundColor: "#fff" }}>
@@ -81,6 +92,7 @@ function About() {
    <EnhancedTable />
    <AlertDialog />
    <IconMenu />
+   <HorizontalLinearStepper />
    
    <Checkbox {...label} defaultChecked />
 
@@ -257,6 +269,60 @@ function About() {
         action={action}
       />
       </Stack>
+      <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
+      <SpeedDial
+        ariaLabel="SpeedDial openIcon example"
+        sx={{ position: 'absolute', bottom: 16, right: 16 }}
+        icon={<SpeedDialIcon openIcon={<EditIcon />} />}
+      >
+        {actions.map((action) => (
+          <SpeedDialAction
+            key={action.name}
+            icon={action.icon}
+            tooltipTitle={action.name}
+          />
+        ))}
+      </SpeedDial>
+    </Box>
+    <Pagination count={10} />
+    <Paper sx={{ width: 320, maxWidth: '100%' }}>
+      <MenuList>
+        <MenuItem>
+          <ListItemIcon>
+            <ContentCut fontSize="small" />
+          </ListItemIcon>
+          <ListItemText>Cut</ListItemText>
+          <Typography variant="body2" color="text.secondary">
+            ⌘X
+          </Typography>
+        </MenuItem>
+        <MenuItem>
+          <ListItemIcon>
+            <ContentCopy fontSize="small" />
+          </ListItemIcon>
+          <ListItemText>Copy</ListItemText>
+          <Typography variant="body2" color="text.secondary">
+            ⌘C
+          </Typography>
+        </MenuItem>
+        <MenuItem>
+          <ListItemIcon>
+            <ContentPaste fontSize="small" />
+          </ListItemIcon>
+          <ListItemText>Paste</ListItemText>
+          <Typography variant="body2" color="text.secondary">
+            ⌘V
+          </Typography>
+        </MenuItem>
+        <Divider />
+        <MenuItem>
+          <ListItemIcon>
+            <Cloud fontSize="small" />
+          </ListItemIcon>
+          <ListItemText>Web Clipboard</ListItemText>
+        </MenuItem>
+      </MenuList>
+    </Paper>
 
       <NewFooter />
     </main>
