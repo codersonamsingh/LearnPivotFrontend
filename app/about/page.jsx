@@ -5,7 +5,7 @@ import { TopAbstract } from "../MyApp";
 import Enquiry from "../Components/Enquiry/Enquiry";
 import { NewFooter } from "../Components/Footer/Footer";
 import { Typography, Grid, Divider, Button, Radio, Autocomplete, Rating, Badge, Box,content, Stack, Chip, List, TextField, CardContent, refreshMessages, CardMedia, Card, 
- CardActions, AppBar, Toolbar,Tooltip,IconButton, Skeleton,Select, Pagination, Checkbox,CircularProgress,SnackbarContent, styled, SpeedDial, SpeedDialIcon, SpeedDialAction, Paper, ListItemIcon, MenuList,
+ CardActions, AppBar, Toolbar,Tooltip,IconButton, Skeleton,Select, CssBaseline, Pagination, Checkbox,CircularProgress,SnackbarContent, styled, SpeedDial, SpeedDialIcon, SpeedDialAction, Paper, ListItemIcon, MenuList, Container,
   } from "@mui/material";
  import MailIcon from '@mui/icons-material/Mail';
 
@@ -41,6 +41,8 @@ import  EnhancedTable from"../Components/About/Table";
 import  AlertDialog from"../Components/About/Alert";
 import  IconMenu from"../Components/About/Menu";
 import HorizontalLinearStepper from "../Components/About/Steeper";
+import BasicTabs from "../Components/About/Tabs";
+import StandardImageList from "../Components/About/Image";
 
 
  
@@ -72,6 +74,13 @@ function About() {
     { icon: <PrintIcon />, name: 'Print' },
     { icon: <ShareIcon />, name: 'Share' },
   ];
+  const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 
   return (
     <main style={{ backgroundColor: "#fff" }}>
@@ -93,7 +102,8 @@ function About() {
    <AlertDialog />
    <IconMenu />
    <HorizontalLinearStepper />
-   
+   <BasicTabs />
+   <StandardImageList />
    <Checkbox {...label} defaultChecked />
 
   <Box sx={{ flexGrow: 1 }}>
@@ -323,6 +333,38 @@ function About() {
         </MenuItem>
       </MenuList>
     </Paper>
+    <Box component="section" sx={{ p: 4, border: '1px dashed grey' }}>
+      This Box renders as an HTML section element.
+    </Box>
+    <React.Fragment>
+      <CssBaseline />
+      <Container maxWidth="sm">
+        <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
+      </Container>
+    </React.Fragment>
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2}>
+        <Grid item xs={8}>
+          <Item>xs=8</Item>
+        </Grid>
+        <Grid item xs={4}>
+          <Item>xs=4</Item>
+        </Grid>
+        <Grid item xs={4}>
+          <Item>xs=4</Item>
+        </Grid>
+        <Grid item xs={8}>
+          <Item>xs=8</Item>
+        </Grid>
+      </Grid>
+    </Box>
+     <Box sx={{ width: '100%' }}>
+      <Stack spacing={2}>
+        <Item>Item 1</Item>
+        <Item>Item 2</Item>
+        <Item>Item 3</Item>
+      </Stack>
+    </Box>
 
       <NewFooter />
     </main>
