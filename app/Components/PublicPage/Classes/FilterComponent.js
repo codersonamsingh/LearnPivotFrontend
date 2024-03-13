@@ -15,7 +15,7 @@ const FilterComponent = () => {
       {
       title:"Type",
       tags:[
-        {label:"Crash Course",id:"crashCourse"},
+        {label:"Initial Test",id:"crashCourse"},
         {label:"Full Course",id:"fullCourse"},
       ]
     },

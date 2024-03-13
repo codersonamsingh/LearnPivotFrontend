@@ -22,7 +22,7 @@ function MockTest() {
     
         {
           _id: "541564515545451",
-          title: "Mastering English Grammar",
+          title: "English Test",
           timing: "February 21, 2024 @ 10:00AM to 12 Noon",
           description: "Join our comprehensive session on mastering English grammar rules and usage.",
           img: "https://img.freepik.com/free-vector/flat-design-english-school-background_23-2149485957.jpg?w=900&t=st=1706446104~exp=1706446704~hmac=1793f247f123d53401121af165d35788ac318e724b2ed7485971e8e773ae2044",
