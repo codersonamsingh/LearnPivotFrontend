@@ -1,71 +1,90 @@
 "use client";
-// import MainContext from './Components/Context/MainContext';
-import React, { Fragment, useEffect } from 'react'
-// import "./pageStyle.css";
-import { useState,Suspense  } from "react";
-// import {DARKMODE} from "./Components/Context/types"
+import React, { useState } from "react";
 import Header from "../Components/Header1/Header";
-import Enquiry from "../Components/Enquiry/Enquiry";
-import Footer, {NewFooter} from "../Components/Footer/Footer";
-import {Grid, TextField, Typography,Box,Button,IconButton,InputAdornment, Container,Tabs,Tab} from '@mui/material';
-import Link from 'next/link';
-import { FcBusinessman,FcBusinesswoman,} from "react-icons/fc";
-//import {authService} from "./services/index"
-import Loading from "../Components/Loading/Loading";
-import Hpage1 from '../Components/PublicPage/HomePage/Hpage1';
-import HeroSec from '../Components/PublicPage/HomePage/HeroSec';
+import "./oneClass.css";
+import { Container, Typography, Grid, Breadcrumbs, Divider, Tabs, fullScreen, Tab } from "@mui/material";
+import Footer from "../Components/Footer/Footer";
+import { useRouter } from "next/navigation";
+import Enquiry from "@/app/Components/Enquiry/Enquiry";
+import OneClass from "../Components/PublicPage/Classes/OneClass";
+import FilterComponent from "../Components/PublicPage/Classes/FilterComponent"; 
+import FilterDialog from "../Components/PublicPage/Classes/FilterDialog"; 
+import { Dialog, useMediaQuery, useTheme, Button, DialogActions, DialogContent } from "@mui/material";
+import Slide from '@mui/material/Slide';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 
-function About() {  
-  // const {state, dispatch} = useContext(MainContext)
-  const [value, setValue] = React.useState(0);
-//   const [hero,setHero] = useState({btn:"Show Gallery",link:"/about/gallery",text:"Bring out the best in you.",bgImg:"https://res.cloudinary.com/oasismanors/image/upload/v1706128914/Oasis2_clq4l3.webp"})
-  const [allItems] = useState([{btn:"Amenities",link:"/amenities",text:"Live life on your terms.",bgImg:"https://res.cloudinary.com/oasismanors/image/upload/v1706128914/Oasis1_rwtkv6.webp"},{btn:"Show Gallery",link:"/about/gallery",text:"Bring out the best in you.",bgImg:"https://res.cloudinary.com/oasismanors/image/upload/v1706128914/Oasis2_clq4l3.webp"},{btn:"Our Meal",link:"/amenities/menu",text:"Feel right at home.",bgImg:"https://res.cloudinary.com/oasismanors/image/upload/v1706128914/Oasis3_biy68f.webp"},{btn:"Supportive Services",link:"/lifestyle",text:"Support you can count on.",bgImg:"https://res.cloudinary.com/oasismanors/image/upload/v1706128915/Oasis4_anftz6.webp"}])
+function Events() {
+  const [events] = useState([
+    
+        {
+          _id: "541564515545451",
+          title: "Mastering English Grammar",
+          timing: "February 21, 2024 @ 10:00AM to 12 Noon",
+          description: "Join our comprehensive session on mastering English grammar rules and usage.",
+          img: "https://img.freepik.com/free-vector/flat-design-english-school-background_23-2149485957.jpg?w=900&t=st=1706446104~exp=1706446704~hmac=1793f247f123d53401121af165d35788ac318e724b2ed7485971e8e773ae2044",
+          tags:[
+            { name: "Class", value: "4", type: "class" },
+            { name: "Type", value: "Full Course", type: "type" },
+            { name: "Duration", value: "3 Month", type: "duration" },
+          ]
+        },
+        // {
+        //   _id: "54156453456431",
+        //   title: "Fundamental Mathmatics",
+        //   timing: "March 01, 2024 @ 11:00AM to 12 Noon",
+        //   description: "Join our comprehensive session on mastering English grammar rules and usage.",
+        //   img: "https://lawshule.co.ke/wp-content/uploads/2022/08/mathematics-word-illustration-stem-science-technology-engineering-education-concept-typography-design-kid-87906806.jpg",
+        //   tags:[
+        //     { name: "Class", value: "5", type: "class" },
+        //     { name: "Type", value: "Full Course", type: "type" },
+        //     { name: "Duration", value: "1 Year", type: "duration" },
+        //   ]
+        // },
+     
+  ]);
+  // const theme = useTheme();
+  // const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  // const [open, setOpen] = React.useState(false);
 
-  useEffect(() => {
-    const interval = setInterval(() => {  //assign interval to a variable to clear it.
-      if(value < allItems.length-1 ){
-        setHero(allItems[value+1]) ;
-          setValue(value+1)
-      }else {
-        setHero(allItems[0]) ;
-        setValue(0);
-      }
-    }, 3000)
-    return () => clearInterval(interval); //This is important
-   
-  }, [value])
+  // const handleClickOpen = () => {
+  //   setOpen(true);
+  // };
 
+  // const handleClose = () => {
+  //   setOpen(false);
+  // };
 
   return (
-    <Fragment>
+    <main style={{ backgroundColor: "#fff" }}>
       <Header />
-      <Suspense fallback={<Loading />}>
-        <TopAbstract />
-   
-        <Hpage1 />
-        <Box >
-          <Suspense fallback={<Loading />}>
-            <Enquiry />
-            <Suspense fallback={<Loading />}>
-              <Footer />
-            </Suspense>
-          </Suspense>
-        </Box>
-      </Suspense>
-    </Fragment>
+
+      <br />
+      <Container>
+        <Grid container spacing={3}>
+        {fullScreen? (
+       
+        <FilterDialog />
+     
+      ):(
+        <Grid item xs={2}>
+        <FilterComponent />
+      </Grid>
+      )}
+          <Grid item xs={fullScreen ? 12 : 10}>
+            {events &&
+              events.map((p, j) => (
+                <OneClass data={p} />
+              ))}
+          </Grid>
+        </Grid>
+      </Container>
+      <Footer />
+    </main>
   );
-  }
+}
 
-
-  
-export function TopAbstract() {
-    return (
-      <div id="topAbstract"/>
-    )
-  }
-
-
-
- 
-export default About
+export default Events;

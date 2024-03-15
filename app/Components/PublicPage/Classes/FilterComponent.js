@@ -3,30 +3,30 @@ import React,{useState} from 'react';
 
 const FilterComponent = () => {
   const [filterData,setFilterData] = useState(
-    [
-      {
-      title:"Class",
-      tags:[
-        {label:"Class 4",id:"class4"},
-        {label:"Class 5",id:"class5"},
-        {label:"Class 6",id:"class6"},
-      ]
-    },
-      {
-      title:"Type",
-      tags:[
-        {label:"Initial Test",id:"crashCourse"},
-        {label:"Full Course",id:"fullCourse"},
-      ]
-    },
-      {
-      title:"Duration",
-      tags:[
-        {label:"3 Months",id:"3months"},
-        {label:"1 Years",id:"1years"},
-      ]
-    },
-  ]
+  //   [
+  //     {
+  //     title:"Class",
+  //     tags:[
+  //       {label:"Class 4",id:"class4"},
+  //       {label:"Class 5",id:"class5"},
+  //       {label:"Class 6",id:"class6"},
+  //     ]
+  //   },
+  //     {
+  //     title:"Type",
+  //     tags:[
+  //       {label:"Initial Test",id:"crashCourse"},
+  //       {label:"Full Course",id:"fullCourse"},
+  //     ]
+  //   },
+  //     {
+  //     title:"Duration",
+  //     tags:[
+  //       {label:"3 Months",id:"3months"},
+  //       {label:"1 Years",id:"1years"},
+  //     ]
+  //   },
+  // ]
   );
   return (
     <>  
